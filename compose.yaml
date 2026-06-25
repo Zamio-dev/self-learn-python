@@ -1,0 +1,12 @@
+services:
+  app:
+    container_name:
+      my-pyapp
+    build:
+      context: .
+    volumes:
+      - data:/app/python
+      - .:/app
+
+volumes:
+  data:
