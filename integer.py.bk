@@ -1,0 +1,20 @@
+import math
+x = 4
+y = 3
+z = x + y
+print(f"{x=}")
+print(f"{y=}")
+print(f"{z=}")
+print(f"{10/3=:.2f} .2f")
+print(f"{10//3=}")
+print(f"{10%3=}")
+print(f"{10*3=}")
+print(f"{10**3=}")
+print(f"{10^3=}")
+print(f"{10*3=!s} !s")
+print(f"{10+3=!r} !r")
+print(f"{round(10.006)=}")
+print(f"{math.ceil(10.007)=}")
+print(f"{math.floor(10.007)=}")
+print(f"{str(x)=}")
+print(f"{abs(10.006)=}")
