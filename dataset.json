@@ -1,0 +1,385 @@
+{
+  "districts": {
+    "official_districts": [
+      "Thiruvananthapuram",
+      "Kollam",
+      "Pathanamthitta",
+      "Alappuzha",
+      "Kottayam",
+      "Idukki",
+      "Ernakulam",
+      "Thrissur",
+      "Palakkad",
+      "Malappuram",
+      "Kozhikode",
+      "Wayanad",
+      "Kannur",
+      "Kasaragod"
+    ]
+  },
+
+  "names": {
+    "hindu": {
+      "male": [
+        "Arjun","Adithyan","Krishna","Hari","Vishnu",
+        "Akhil","Abhinav","Gokul","Midhun","Sreehari",
+        "Nithin","Rahul","Manu","Rohith","Kiran",
+        "Athul","Karthik","Anand","Pranav","Jayakrishnan",
+        "Mahesh","Ajith","Deepak","Sooraj","Varun"
+      ],
+      "female": [
+        "Arya","Anjali","Lakshmi","Devika","Aparna",
+        "Haritha","Malavika","Nayana","Keerthana","Athira",
+        "Parvathy","Bhavana","Amritha","Sandra","Megha",
+        "Gayathri","Vaishnavi","Akshaya","Krishna Priya","Sreelakshmi",
+        "Anagha","Reshma","Nimisha","Shilpa","Divya"
+      ]
+    },
+
+    "muslim": {
+      "male": [
+        "Sameer","Adil","Ayaan","Rizwan","Naufal",
+        "Shamil","Farhan","Anas","Muhsin","Afsal",
+        "Faizal","Yaseen","Shiyas","Ashiq","Ramees",
+        "Shanid","Rayyan","Jasim","Nihad","Hisham",
+        "Safwan","Junaid","Zayan","Suhail","Faris"
+      ],
+      "female": [
+        "Amina","Aysha","Fathima","Mariam","Hiba",
+        "Nadiya","Shahana","Nafla","Rinsha","Suhana",
+        "Raziya","Zahra","Safa","Lubna","Tasneem",
+        "Shifa","Noora","Asma","Riyana","Aleena",
+        "Ruba","Aafiya","Haneena","Nazeera","Rameesa"
+      ]
+    },
+
+    "christian": {
+      "male": [
+        "Thomas","Joseph","Mathew","John","Antony",
+        "Sebastian","Abraham","George","Paul","Jacob",
+        "Daniel","Benedict","Kevin","Joel","Chris",
+        "Michael","Jerin","Alvin","Samuel","Joshua",
+        "Ebin","Noel","Robin","Aldrin","Jerome"
+      ],
+      "female": [
+        "Anna","Maria","Elsa","Helen","Grace",
+        "Rose","Sandra","Teresa","Christina","Julia",
+        "Diana","Angel","Clara","Riya","Merin",
+        "Linda","Elina","Susan","Ancy","Mariya",
+        "Alicia","Celine","Rebecca","Joanna","Elsamma"
+      ]
+    }
+  },
+
+  "festivals": {
+    "state_festivals": [
+      "Onam",
+      "Vishu",
+      "Thiruvathira",
+      "Navaratri",
+      "Karkidaka Vavu",
+      "Makara Vilakku",
+      "Temple Utsavam",
+      "Pulikali",
+      "Poorakkali",
+      "Boat Race Festival"
+    ],
+
+    "hindu_festivals": [
+      "Thrissur Pooram",
+      "Kodungallur Bharani",
+      "Chettikulangara Bharani",
+      "Attukal Pongala",
+      "Sabarimala Festival",
+      "Kalpathi Ratholsavam",
+      "Uthralikavu Pooram",
+      "Aranmula Uthrattathi",
+      "Theyyam Festival",
+      "Puthari Festival"
+    ],
+
+    "muslim_festivals": [
+      "Eid ul Fitr",
+      "Eid ul Adha",
+      "Ramzan",
+      "Milad un Nabi",
+      "Muharram",
+      "Kondotty Nercha",
+      "Ponnani Nercha",
+      "Beemapally Uroos",
+      "Mampuram Nercha",
+      "Malabar Mahallu Festival"
+    ],
+
+    "christian_festivals": [
+      "Christmas",
+      "Easter",
+      "Palm Sunday",
+      "Good Friday",
+      "St Sebastian Feast",
+      "Parumala Perunnal",
+      "Feast of St George",
+      "All Saints Day",
+      "New Year Mass",
+      "Holy Week"
+    ]
+  },
+
+  "places": {
+    "kozhikode": [
+      "Kozhikode Beach",
+      "Kappad Beach",
+      "SM Street",
+      "Beypore Port",
+      "Mananchira Square",
+      "Mishkal Mosque",
+      "Sarovaram Bio Park",
+      "Tali Temple",
+      "Thusharagiri Waterfalls",
+      "Kakkayam Dam",
+      "Peruvannamuzhi Dam",
+      "Kadalundi Bird Sanctuary",
+      "Mini Ooty",
+      "Azhakodi Temple",
+      "Krishnan Menon Museum",
+      "Feroke Bridge",
+      "Chaliyam Beach",
+      "Payyoli Beach",
+      "Thikkodi Lighthouse",
+      "Vellarimala Hills",
+      "Kozhippara Falls",
+      "Beypore Marina",
+      "Janakikkadu Forest",
+      "Kadalundi Estuary",
+      "Vadakara Sand Banks"
+    ],
+
+    "malappuram": [
+      "Kodikuthimala",
+      "Nilambur Teak Museum",
+      "Adyanpara Waterfalls",
+      "Keralamkundu Waterfalls",
+      "Kottakkunnu Park",
+      "Mini Ooty Arimbra Hills",
+      "Conolly Plot",
+      "Ponnani Beach",
+      "Padinharekara Beach",
+      "Biyyam Kayal",
+      "Kottakkal Arya Vaidya Sala",
+      "Tanur Beach",
+      "Mampuram Makham",
+      "Tirur Thunchan Memorial",
+      "Parappanangadi Beach",
+      "Kondotty Mosque",
+      "Areekode River",
+      "Perinthalmanna Heritage Town",
+      "Kooriyad Wetlands",
+      "Kuttippuram Bridge",
+      "Poorapuzha River",
+      "Valanchery Town",
+      "Chelari Town",
+      "Edappal Junction",
+      "Nilambur Forest Belt"
+    ]
+  },
+
+  "food": {
+    "rice_based": [
+      "Puttu",
+      "Pathiri",
+      "Ney Pathiri",
+      "Poricha Pathiri",
+      "Idiyappam",
+      "Appam",
+      "Ghee Rice",
+      "Kanji",
+      "Kappa",
+      "Rice Roti"
+    ],
+
+    "main_dishes": [
+      "Malabar Biryani",
+      "Kozhikodan Biryani",
+      "Ponnani Biryani",
+      "Mutton Biryani",
+      "Chicken Curry",
+      "Beef Fry",
+      "Fish Curry",
+      "Mutton Roast",
+      "Chicken Roast",
+      "Duck Roast",
+      "Prawns Roast",
+      "Vegetable Stew",
+      "Avial",
+      "Sambar",
+      "Sadya"
+    ],
+
+    "malabar_special": [
+      "Kuzhi Mandi",
+      "Al Faham Chicken",
+      "Erachi Pathiri",
+      "Meen Pathiri",
+      "Irachi Puttu",
+      "Kallummakkaya Curry",
+      "Chicken Kondattam",
+      "Thalassery Chicken Fry",
+      "Tapioca Beef Curry",
+      "Karimeen Pollichathu"
+    ],
+
+    "desserts": [
+      "Palada Payasam",
+      "Ada Pradhaman",
+      "Unnakkaya",
+      "Muttamala",
+      "Kinnathappam",
+      "Kalthappam",
+      "Vattayappam",
+      "Ela Ada",
+      "Chatti Pathiri Sweet",
+      "Semiya Payasam"
+    ]
+  },
+
+  "snacks": {
+    "fried_snacks": [
+      "Pazham Pori",
+      "Parippu Vada",
+      "Uzhunnu Vada",
+      "Samosa",
+      "Chicken Cutlet",
+      "Fish Cutlet",
+      "Bread Bajji",
+      "Bonda",
+      "Onion Pakoda",
+      "Chicken 65"
+    ],
+
+    "malabar_special_snacks": [
+      "Kozhikode Halwa",
+      "Unnakkaya",
+      "Arikadukka",
+      "Kallummakkaya Fry",
+      "Madakku San",
+      "Kalthappam",
+      "Kinnathappam",
+      "Ottada",
+      "Chatti Pathiri",
+      "Muttamala"
+    ],
+
+    "bakery_items": [
+      "Egg Puff",
+      "Chicken Puff",
+      "Veg Puff",
+      "Chicken Roll",
+      "Parotta Roll",
+      "Banana Cake",
+      "Plum Cake",
+      "Meat Puff",
+      "Cream Bun",
+      "Tea Cake"
+    ],
+
+    "traditional": [
+      "Achappam",
+      "Murukku",
+      "Kuzhalappam",
+      "Kozhukatta",
+      "Sughiyan",
+      "Ela Ada",
+      "Jackfruit Chips",
+      "Banana Chips",
+      "Sharkara Varatti",
+      "Kai Murukku"
+    ]
+  },
+
+  "cultural_items": {
+    "traditional_clothing": [
+      "Kasavu Mundu",
+      "Kasavu Saree",
+      "Set Mundu",
+      "Mappila Dress",
+      "Neriyathu",
+      "Traditional Hijab Style",
+      "Temple Dhoti",
+      "Handloom Shirt"
+    ],
+
+    "musical_instruments": [
+      "Chenda",
+      "Maddalam",
+      "Edakka",
+      "Thimila",
+      "Kombu",
+      "Udukku",
+      "Tabla",
+      "Duff"
+    ],
+
+    "handicrafts": [
+      "Aranmula Mirror",
+      "Coir Mats",
+      "Palm Leaf Basket",
+      "Coconut Shell Crafts",
+      "Bamboo Basket",
+      "Wooden Boat Model",
+      "Kathakali Mask",
+      "Theyyam Costume Accessories"
+    ],
+
+    "household_items": [
+      "Nilavilakku",
+      "Uruli",
+      "Clay Pot",
+      "Brass Bell",
+      "Coconut Scraper",
+      "Copper Vessel",
+      "Toddy Pot",
+      "Banana Leaf Plate"
+    ]
+  },
+
+  "spices_and_agriculture": {
+    "spices": [
+      "Black Pepper",
+      "Cardamom",
+      "Cloves",
+      "Cinnamon",
+      "Nutmeg",
+      "Turmeric",
+      "Dry Ginger",
+      "Cumin",
+      "Fenugreek",
+      "Mustard Seeds"
+    ],
+
+    "fruits": [
+      "Nendran Banana",
+      "Jackfruit",
+      "Mango",
+      "Rambutan",
+      "Mangosteen",
+      "Papaya",
+      "Guava",
+      "Tender Coconut",
+      "Sapota",
+      "Pineapple"
+    ],
+
+    "cash_crops": [
+      "Coconut",
+      "Rubber",
+      "Tea",
+      "Coffee",
+      "Arecanut",
+      "Cashew",
+      "Cocoa",
+      "Pepper Vine",
+      "Plantain",
+      "Paddy"
+    ]
+  }
+}

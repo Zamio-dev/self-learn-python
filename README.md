@@ -8,13 +8,17 @@ I'm teaching myself Python using Docker as the environment, and this repo is a r
 
 ## Table of Contents
 
-1. [Getting Started (One Line)](#getting-started)
-2. [Dockerfile](#dockerfile)
-3. [Docker Compose](#docker-compose)
-4. [What I'm Learning in Python](#what-im-learning-in-python)
+1. [Getting Started](#getting-started)
+2. [Docker Setup](#docker-setup)
+3. [What I'm Learning](#what-im-learning)
    1. [Strings](#1-strings)
    2. [Numbers](#2-numbers)
    3. [Types and Type Casting](#3-types-and-type-casting)
+   4. [Loops](#4-loops)
+   5. [Functions](#5-functions)
+   6. [Missing Basics](#6-missing-basics)
+   7. [Terminal Art](#7-terminal-art)
+4. [Data Files](#data-files)
 5. [Where I'm Going](#where-im-going)
 
 ---
@@ -29,9 +33,9 @@ docker compose up
 
 That's it — it spins up a container using my `Dockerfile` and runs the scripts I've been working through.
 
----
+## Docker Setup<a id="docker-setup"></a>
 
-## Dockerfile<a id="dockerfile"></a>
+### Dockerfile
 
 ```dockerfile
 FROM python:3.14-alpine3.24
@@ -39,9 +43,9 @@ WORKDIR /app
 CMD ["python","myapp.py"]
 ```
 
-This is pretty lean — I'm using Python 3.14 on Alpine Linux (a minimal distro) and setting my working directory to `/app`. The container will run `myapp.py` by default.
+Pretty lean — Python 3.14 on Alpine Linux (a minimal distro), working directory at `/app`. The container runs `myapp.py` by default.
 
-## Docker Compose<a id="docker-compose"></a>
+### Docker Compose
 
 ```yaml
 services:
@@ -57,17 +61,18 @@ volumes:
   data:
 ```
 
-The compose file names my container (`my-pyapp`), builds from the Dockerfile, and maps my local code directory into the container so I can edit and see changes without rebuilding. It also sets up a persistent volume for data.
+Names the container `my-pyapp`, builds from the Dockerfile, and maps the local directory into the container so I can edit and see changes instantly without rebuilding. Also sets up a persistent data volume.
 
 ---
 
-## What I'm Learning in Python <a id="what-im-learning-in-python"></a>
+## What I'm Learning<a id="what-im-learning"></a>
 
-This repo tracks 3 topics so far — I'm adding more as I go along.
 
-### 1. Strings (`strings.py`)<a id="1-strings"></a>
+### 1. Strings (`strings.py` / `strings.py`)
 
-getting around Python's string toolkit:
+From basic slicing to formatting — the full string toolkit, explained.
+
+**Quick start** — `strings.py`:
 
 ```python
 message = """
@@ -77,49 +82,65 @@ i think things will get better
 ```
 
 - `message[:10]` → first 10 characters
-- `message[5:]` → everything from character 5 to the end
+- `message[5:]` → everything from character 5 onward
 - `message[-5:]` → last 5 characters
-- `message[-1:-7]` → slices in reverse (toward the left)
-- `message.upper()` / `message.lower()` → change case
-- `message.title()` → title case
-- `message.strip()` → remove leading/trailing whitespace
-- `message.find('will')` → index of a substring, or `-1` if not found
-- `message.replace('will','may')` → returns a new string with substitutions
-- `'you' in message` / `'you' not in message` → checks existence, returns `True`/`False`
+- `message.upper()` / `.lower()` / `.title()` → case changes
+- `message.strip()` → remove extra whitespace
+- `message.find('will')` → index of a substring (or `-1` if not found)
+- `message.replace('will','may')` → swap words, returns a new string
+- `'you' in message` → existence check, returns `True`/`False`
+
+`strings.py` goes much further:
+
+- `capitalize()` vs `swapcase()` vs `title()` — when to use which
+- `lstrip()` / `rstrip()` — especially useful when reading files (that trailing `\n`)
+- `startswith()` / `endswith()` — great for file extension checks
+- `split()` / `join()` — breaking sentences into words, gluing lists back together (the CSV workflow)
+- `isdigit()` / `isalpha()` / `isalnum()` — input validation
+- `zfill()` — pad numbers with zeros (`"7"` → `"0007"`, like room numbers)
+- `center()` / `ljust()` / `rjust()` — align text for tables
+- Escape characters: `\n`, `\t`, `\"`, `\\`
+- `len()` — length checks (password validation, word counts)
+- F-string formatting: `{price:.2f}`, `{salary:,.2f}` for money
+- `.format()` method and old-school `%` formatting
 
 ---
 
-### 2. Numbers (`integer.py`)<a id="2-numbers"></a>
+### 2. Numbers (`integer.py`)
 
-Getting comfortable with arithmetic and formatting:
+Arithmetic, rounding, formatting, and the weird operators Python throws at you.
+
+**Quick start** — `integer.py`:
 
 ```python
-import math
-x = 4
-y = 3
-z = x + y  # 7
-
 10/3      # 3.333...  (true division)
-10//3     # 3         (floor division — rounds down)
+10//3     # 3         (floor division)
 10%3      # 1         (remainder)
 10**3     # 1000      (exponentiation)
 10^3      # 9         (bitwise XOR — not power!)
-
-round(10.006)          # 10
-math.ceil(10.007)      # 11 (round up)
-math.floor(10.007)     # 10 (round down)
-abs(-5)                # 5
-
-print(f"{10/3=:.2f}")  # formatted output: 3.33
 ```
 
-Learning note: the `^` operator in Python is *not* exponentiation (that's `**`), it's bitwise XOR. A common trap.
+Learning note: `^` in Python is **not** exponentiation — that's `**`. `^` is bitwise XOR. A trap for anyone coming from other languages.
+
+
+- `!s` / `!r` in f-strings — debug output
+- `round()`, `math.ceil()`, `math.floor()` — when to use each
+- `hex()`, `oct()`, `bin()` — number bases (colors, file permissions, binary)
+- Format specifiers: `{42:05d}` for zero-padding, `{salary:,.2f}` for commas
+- `divmod()` — get quotient and remainder in one step
+- `pow(base, exp, mod)` — modular exponentiation (cryptography)
+- Python handles arbitrarily large integers — no overflow
+- Comparison chaining: `18 <= age < 65` — write math naturally
+- `math.gcd()` / `math.lcm()` — great common divisor, least common multiple
+- Multiple assignment and swapping: `a, b = b, a`
 
 ---
 
-### 3. Types and Type Casting (`data_type_typecasting.py`)<a id="3-types-and-type-casting"></a>
+### 3. Types and Type Casting (`data_type_typecasting.py`)
 
-Exploring the built-in types and how to convert between them:
+Python's built-in types and how to convert between them.
+
+**Quick start** — `data_type_typecasting.py`:
 
 ```python
 variable_1 = 1                  # int
@@ -132,20 +153,93 @@ variable_9 = {1, 2, 3, 4}       # set
 variable_10 = b"hello"          # bytes
 ```
 
-Type conversion in action:
 
-```python
-type(float(variable_1))   # int → float
-type(int(variable_3))     # float → int
-str(int(variable_3))      # float → int → str
-```
+- Full coverage of `None` ("nothing here" — like an empty parking spot)
+- Tuple as immutable data (like temple coordinates — fixed, permanent)
+- `set()` for removing duplicates ("no place visited twice")
+- Detailed casting walkthroughs: `int ↔ float`, `str ↔ int`, `list ↔ tuple`, `list → set` (dedup)
 
-I'm getting comfortable with Python's `type()` function to check what a variable is, and the core cast functions (`int()`, `float()`, `str()`, `bool()`) to change between them.
+---
+
+### 4. Loops (`loops.py`)
+
+Repetition, iteration, and the Pythonic ways to do it.
+
+- `for` loop — go through a list (shopping list scenario)
+- `enumerate()` — get item index while looping
+- `range()` — count down, count up, countdown before liftoff
+- Accumulating totals in a loop (splitting the dinner bill)
+- `zip()` — match two lists side by side (names to bills)
+- `while` + `break` — keep asking until the user says "done"
+- `for...else` — "completed without interruption" semantics (parking spot checker)
+- Nested `for` + `if/else` (mini calendar with events)
+- **List comprehension** — `[name.upper() for name in names]`
+- **List comprehension with filter** — `[n for n in numbers if n % 2 == 0]`
+- **Dict comprehension** — `{word: len(word) for word in words}`
+
+---
+
+### 5. Functions (`functions.py`)
+
+From basic `def` to decorators — functions are where Python really shines.
+
+This file uses `dataset.json` (a dataset of names and places) for real examples.
+
+- Basic function with parameters
+- `return` — giving back a result
+- Default parameters (`discount(price, rate=0.1)`)
+- `*args` — accept any number of positional arguments
+- `**kwargs` — accept any number of keyword arguments
+- `lambda` — one-line anonymous functions
+- `map()` — apply a function to every item
+- `filter()` — keep items matching a condition
+- Nested functions and **closures** — inner function remembering outer variables
+- Docstrings — documenting what a function does
+- **Recursion** — factorial as a self-calling function
+- **Decorators** — `@logger` wraps a function with extra behavior
+- Passing functions as arguments (`apply_twice(double, 5)`)
+- `global` vs `local` scope
+
+---
+
+### 6. Missing Basics (`basics_missing.py`)
+
+The stuff you need but textbooks skip — this is the most practical file in the repo.
+
+- **Lists** — `append()`, `insert()`, `remove()`, `pop()`, `sort()` vs `sorted()`
+- **Tuples** — unpacking, packing, `count()`
+- **Dictionaries** — `.get()` for safe access, `.update()`, `.keys()` / `.values()` / `.items()`, `.pop()` with default
+- **Sets** — union (`|`), intersection (`&`), difference (`-`), `add()`, `discard()`
+- **File handling** — `open()` with `with`, read/write/append modes, line-by-line reading
+- **Error handling** — `try/except/else/finally`, custom exceptions
+- **Classes & OOP** — `__init__`, methods, inheritance, `super().__init__()`
+- **Modules & imports** — `import`, `from...import`
+- **JSON** — `json.load()`, `json.dump()`, `json.dumps()` (read/write files and strings)
+- **Regex** — `re.findall()`, `re.sub()`, pattern matching for phones and emails
+- **datetime** — `now()`, `strftime()`, `timedelta`, `strptime()`
+- **random** — `randint()`, `uniform()`, `choice()`, `shuffle()`, `sample()`
+- **Generators** — `yield` for lazy, memory-efficient iteration
+- **Context managers** — `with` statement internals, building your own
+- **collections** — `Counter`, `defaultdict`
+
+---
+
+### 7. Terminal Art (`blackhole.py`)
+
+A physics-based black hole animation that runs in the terminal. 280 particles spiral toward an event horizon with relativistic gravity, frame-dragging, and Doppler-shifted colors. All stdlib — no dependencies.
+
+Also includes a companion tool in `blackhole/` — a zsh wrapper (`bh`) that pipes command error output into the black hole for a dramatic error visualization.
+
+---
+
+## Data Files
+
+- **`dataset.json`** — A structured dataset of names (by religion/gender) and places (by city). Used by `functions.py` for `map`/`filter` examples and by `basics_missing.py` for JSON handling demos.
 
 ---
 
 ## Where I'm Going<a id="where-im-going"></a>
 
-This is a work in progress — more Python topics coming as I learn them.
+This is still a work in progress. Take each topic, start simple, then go deep with local context. More topics coming as I learn them.
 
 The goal is simple: build understanding, one script at a time.
