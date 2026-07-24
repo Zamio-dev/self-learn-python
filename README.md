@@ -16,14 +16,7 @@ I'm teaching myself Python using Docker as the environment, and this repo is a r
    3. [Types and Type Casting](#3-types-and-type-casting)
    4. [Loops](#4-loops)
    5. [Functions](#5-functions)
-   6. [Missing Basics](#6-missing-basics)
-<<<<<<< HEAD
 4. [Where I'm Going](#where-im-going)
-=======
-   7. [Terminal Art](#7-terminal-art)
-4. [Data Files](#data-files)
-5. [Where I'm Going](#where-im-going)
->>>>>>> fd49d4133ab0893c574485ba15ca7dd5ebd2becf
 
 ---
 
@@ -272,42 +265,6 @@ This file uses `dataset.json` (a dataset of names and places) for real examples.
 
 ---
 
-### 6. Missing Basics (`basics_missing.py`)
-
-The stuff you need but textbooks skip — this is the most practical file in the repo.
-
-- **Lists** — `append()`, `insert()`, `remove()`, `pop()`, `sort()` vs `sorted()`
-- **Tuples** — unpacking, packing, `count()`
-- **Dictionaries** — `.get()` for safe access, `.update()`, `.keys()` / `.values()` / `.items()`, `.pop()` with default
-- **Sets** — union (`|`), intersection (`&`), difference (`-`), `add()`, `discard()`
-- **File handling** — `open()` with `with`, read/write/append modes, line-by-line reading
-- **Error handling** — `try/except/else/finally`, custom exceptions
-- **Classes & OOP** — `__init__`, methods, inheritance, `super().__init__()`
-- **Modules & imports** — `import`, `from...import`
-- **JSON** — `json.load()`, `json.dump()`, `json.dumps()` (read/write files and strings)
-- **Regex** — `re.findall()`, `re.sub()`, pattern matching for phones and emails
-- **datetime** — `now()`, `strftime()`, `timedelta`, `strptime()`
-- **random** — `randint()`, `uniform()`, `choice()`, `shuffle()`, `sample()`
-- **Generators** — `yield` for lazy, memory-efficient iteration
-- **Context managers** — `with` statement internals, building your own
-- **collections** — `Counter`, `defaultdict`
-
----
-
-### 7. Terminal Art (`blackhole.py`)
-
-A physics-based black hole animation that runs in the terminal. 280 particles spiral toward an event horizon with relativistic gravity, frame-dragging, and Doppler-shifted colors. All stdlib — no dependencies.
-
-Also includes a companion tool in `blackhole/` — a zsh wrapper (`bh`) that pipes command error output into the black hole for a dramatic error visualization.
-
----
-
-## Data Files
-
-- **`dataset.json`** — A structured dataset of names (by religion/gender) and places (by city). Used by `functions.py` for `map`/`filter` examples and by `basics_missing.py` for JSON handling demos.
->>>>>>> fd49d4133ab0893c574485ba15ca7dd5ebd2becf
-
----
 
 ## Where I'm Going<a id="where-im-going"></a>
 
