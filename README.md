@@ -17,7 +17,13 @@ I'm teaching myself Python using Docker as the environment, and this repo is a r
    4. [Loops](#4-loops)
    5. [Functions](#5-functions)
    6. [Missing Basics](#6-missing-basics)
+<<<<<<< HEAD
 4. [Where I'm Going](#where-im-going)
+=======
+   7. [Terminal Art](#7-terminal-art)
+4. [Data Files](#data-files)
+5. [Where I'm Going](#where-im-going)
+>>>>>>> fd49d4133ab0893c574485ba15ca7dd5ebd2becf
 
 ---
 
@@ -156,6 +162,7 @@ variable_10 = b"hello"          # bytes
 - Tuple as immutable data (like temple coordinates — fixed, permanent)
 - `set()` for removing duplicates ("no place visited twice")
 - Detailed casting walkthroughs: `int ↔ float`, `str ↔ int`, `list ↔ tuple`, `list → set` (dedup)
+<<<<<<< HEAD
 
 ---
 
@@ -220,6 +227,85 @@ The stuff you need but textbooks skip — this is the most practical file in the
 - **Context managers** — `with` statement internals, building your own
 - **collections** — `Counter`, `defaultdict`
 
+=======
+
+---
+
+### 4. Loops (`loops.py`)
+
+Repetition, iteration, and the Pythonic ways to do it.
+
+- `for` loop — go through a list (shopping list scenario)
+- `enumerate()` — get item index while looping
+- `range()` — count down, count up, countdown before liftoff
+- Accumulating totals in a loop (splitting the dinner bill)
+- `zip()` — match two lists side by side (names to bills)
+- `while` + `break` — keep asking until the user says "done"
+- `for...else` — "completed without interruption" semantics (parking spot checker)
+- Nested `for` + `if/else` (mini calendar with events)
+- **List comprehension** — `[name.upper() for name in names]`
+- **List comprehension with filter** — `[n for n in numbers if n % 2 == 0]`
+- **Dict comprehension** — `{word: len(word) for word in words}`
+
+---
+
+### 5. Functions (`functions.py`)
+
+From basic `def` to decorators — functions are where Python really shines.
+
+This file uses `dataset.json` (a dataset of names and places) for real examples.
+
+- Basic function with parameters
+- `return` — giving back a result
+- Default parameters (`discount(price, rate=0.1)`)
+- `*args` — accept any number of positional arguments
+- `**kwargs` — accept any number of keyword arguments
+- `lambda` — one-line anonymous functions
+- `map()` — apply a function to every item
+- `filter()` — keep items matching a condition
+- Nested functions and **closures** — inner function remembering outer variables
+- Docstrings — documenting what a function does
+- **Recursion** — factorial as a self-calling function
+- **Decorators** — `@logger` wraps a function with extra behavior
+- Passing functions as arguments (`apply_twice(double, 5)`)
+- `global` vs `local` scope
+
+---
+
+### 6. Missing Basics (`basics_missing.py`)
+
+The stuff you need but textbooks skip — this is the most practical file in the repo.
+
+- **Lists** — `append()`, `insert()`, `remove()`, `pop()`, `sort()` vs `sorted()`
+- **Tuples** — unpacking, packing, `count()`
+- **Dictionaries** — `.get()` for safe access, `.update()`, `.keys()` / `.values()` / `.items()`, `.pop()` with default
+- **Sets** — union (`|`), intersection (`&`), difference (`-`), `add()`, `discard()`
+- **File handling** — `open()` with `with`, read/write/append modes, line-by-line reading
+- **Error handling** — `try/except/else/finally`, custom exceptions
+- **Classes & OOP** — `__init__`, methods, inheritance, `super().__init__()`
+- **Modules & imports** — `import`, `from...import`
+- **JSON** — `json.load()`, `json.dump()`, `json.dumps()` (read/write files and strings)
+- **Regex** — `re.findall()`, `re.sub()`, pattern matching for phones and emails
+- **datetime** — `now()`, `strftime()`, `timedelta`, `strptime()`
+- **random** — `randint()`, `uniform()`, `choice()`, `shuffle()`, `sample()`
+- **Generators** — `yield` for lazy, memory-efficient iteration
+- **Context managers** — `with` statement internals, building your own
+- **collections** — `Counter`, `defaultdict`
+
+---
+
+### 7. Terminal Art (`blackhole.py`)
+
+A physics-based black hole animation that runs in the terminal. 280 particles spiral toward an event horizon with relativistic gravity, frame-dragging, and Doppler-shifted colors. All stdlib — no dependencies.
+
+Also includes a companion tool in `blackhole/` — a zsh wrapper (`bh`) that pipes command error output into the black hole for a dramatic error visualization.
+
+---
+
+## Data Files
+
+- **`dataset.json`** — A structured dataset of names (by religion/gender) and places (by city). Used by `functions.py` for `map`/`filter` examples and by `basics_missing.py` for JSON handling demos.
+>>>>>>> fd49d4133ab0893c574485ba15ca7dd5ebd2becf
 
 ---
 
