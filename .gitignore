@@ -3,9 +3,16 @@
 *.DS_Store
 blackhole
 blackhole/*
+<<<<<<< HEAD
 blackhole.py
 dataset.json
 basics_missing.py
 data_type_typecaste.py.bk
 integer.py.bk
 strings.py.bk
+=======
+<<<<<<< HEAD
+datatset.json
+=======
+>>>>>>> fd49d4133ab0893c574485ba15ca7dd5ebd2becf
+>>>>>>> 6851e3ba63791952f57128aabe996b7ef67207c1
