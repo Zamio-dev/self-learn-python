@@ -17,9 +17,7 @@ I'm teaching myself Python using Docker as the environment, and this repo is a r
    4. [Loops](#4-loops)
    5. [Functions](#5-functions)
    6. [Missing Basics](#6-missing-basics)
-   7. [Terminal Art](#7-terminal-art)
-4. [Data Files](#data-files)
-5. [Where I'm Going](#where-im-going)
+4. [Where I'm Going](#where-im-going)
 
 ---
 
@@ -222,19 +220,6 @@ The stuff you need but textbooks skip — this is the most practical file in the
 - **Context managers** — `with` statement internals, building your own
 - **collections** — `Counter`, `defaultdict`
 
----
-
-### 7. Terminal Art (`blackhole.py`)
-
-A physics-based black hole animation that runs in the terminal. 280 particles spiral toward an event horizon with relativistic gravity, frame-dragging, and Doppler-shifted colors. All stdlib — no dependencies.
-
-Also includes a companion tool in `blackhole/` — a zsh wrapper (`bh`) that pipes command error output into the black hole for a dramatic error visualization.
-
----
-
-## Data Files
-
-- **`dataset.json`** — A structured dataset of names (by religion/gender) and places (by city). Used by `functions.py` for `map`/`filter` examples and by `basics_missing.py` for JSON handling demos.
 
 ---
 
