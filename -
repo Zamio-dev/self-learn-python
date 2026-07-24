@@ -1,8 +1,4 @@
-.obsidian
-.DS_Store
-*.DS_Store
 blackhole
-blackhole/*
 blackhole.py
 dataset.json
 basics_missing.py
